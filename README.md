@@ -1,35 +1,23 @@
 # An Android simple LineChart 
 
 ###Perview
-![image](https://github.com/stormdzh/SimpleLineChart-master/blob/master/perview.png)
+![gif](https://github.com/stormdzh/DownOpenView/blob/master/Effect.gif)
 ###How To Use
-Add a SimpleLineChart into your XML.
+Add a ViewDownOpen into your XML.
 
-  <com.wingsofts.testlinechart.SimpleLineChart
-        android:background="#22ff0000"
-        android:id="@+id/simpleLineChart"
-        android:layout_width="400dp"
-        android:layout_height="200dp" />
-		
-You must set XAxis item and YAxis item and dataSource like:
- mSimpleLineChart = (SimpleLineChart) findViewById(R.id.simpleLineChart);
-        String[] xItem = {"2013","2014","2016","2017"};
-        String[] yItem = {"10k","20k","30k","40k","50k"};
-        if(mSimpleLineChart == null)
-            Log.e("wing","null!!!!");
-        mSimpleLineChart.setXItem(xItem);
-        mSimpleLineChart.setYItem(yItem);
+ <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-        HashMap<String,Integer> pointMap = new HashMap();
-        pointMap.put("2013",10);
-        pointMap.put("2014",2);
-        pointMap.put("2016",4);
-        pointMap.put("2017",10);
-        mSimpleLineChart.setLine1Data(pointMap);
+    <com.stormdzh.downopenview.ViewDownOpen
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.stormdzh.downopenview.ViewDownOpen>
 
-        HashMap<String,Integer> pointMap2 = new HashMap();
-        pointMap2.put("2013",4);
-        pointMap2.put("2014",9);
-        pointMap2.put("2016",6);
-        pointMap2.put("2017",3);
-        mSimpleLineChart.setLine2Data(pointMap2);
+</RelativeLayout>
